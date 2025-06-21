@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Awosedo's Bio Quiz</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+</head>
+<body>
+
+  <!-- Start screen -->
+  <div id="start-screen" class="quiz-container">
+    <h1>Welcome to Awosedo's Quiz✍️</h1>
+    <p>Enter your name to begin:</p>
+    <input type="text" id="name-input" placeholder="Your name..." />
+    <button onclick="startQuiz()">Start Quiz</button>
+    <br />
+    <button onclick="loadLeaderboard()">🌍 View Leaderboard</button>
+    <button onclick="loadHistory()">📚 My History</button>
+  </div>
+
+  <!-- Quiz box -->
+  <div id="quiz-box" class="quiz-container" style="display: none;">
+    <h2 id="question">Question goes here</h2>
+    <div id="options">
+      <button onclick="checkAnswer(this)">Option 1</button>
+      <button onclick="checkAnswer(this)">Option 2</button>
+      <button onclick="checkAnswer(this)">Option 3</button>
+      <button onclick="checkAnswer(this)">Option 4</button>
+    </div>
+    <p id="result"></p>
+    <p id="score">Score: 0</p>
+    <button id="next-btn" onclick="nextQuestion()" style="display: none;">Next</button>
+  </div>
+
+  <!-- End screen -->
+  <div id="end-screen" class="quiz-container" style="display: none;">
+    <h1>🎉 Quiz Completed!</h1>
+    <p id="final-score"></p>
+    <button onclick="restartQuiz()">🔁 Try Again</button>
+    <button onclick="goHome()">🏠 Home</button>
+  </div>
+
+  <!-- Leaderboard screen -->
+  <div id="leaderboard-screen" class="quiz-container" style="display: none;">
+    <h1>🌍 Global Leaderboard</h1>
+    <ul id="leaderboard-list"></ul>
+    <button onclick="goHome()">🏠 Home</button>
+  </div>
+
+  <!-- History screen -->
+  <div id="history-screen" class="quiz-container" style="display: none;">
+    <h1>📚 My Quiz History</h1>
+    <ul id="history-list"></ul>
+    <button onclick="goHome()">🏠 Home</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
