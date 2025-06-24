@@ -14,7 +14,6 @@ let userName = "";
 let current = 0;
 let score = 0;
 
-onload="alert('HELLO WORLD')"
 // Sound effects
 const correctSound = new Audio("https://cdn.pixabay.com/audio/2022/03/15/audio_14749413b7.mp3");
 const wrongSound = new Audio("https://cdn.pixabay.com/audio/2022/03/15/audio_ebd9940bc5.mp3");
