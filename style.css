@@ -31,6 +31,7 @@ h1 {
   margin-bottom: 20px;
   color: #ffeb3b;
   animation: bounce 1s ease;
+  animation: bounce 1.0s ease infinite;
 }
 
 h2 {
