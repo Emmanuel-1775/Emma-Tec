@@ -1,3 +1,11 @@
+var c = confirm("WELCOME TO PETER'S QUIZ APPLICATION. Please note that this quiz is designed to test your knowledge of Biology.");
+
+if (c == true)
+  alert("Let's get started!");
+    
+else 
+  alert("You have cancelled the quiz, please refresh the page to try again!");
+
 // Replace with your actual Firebase config if using
 const firebaseConfig = {
   apiKey: "AIzaSyBNXhy5i-uaMf266ly0mSClwEmlX740bno",
